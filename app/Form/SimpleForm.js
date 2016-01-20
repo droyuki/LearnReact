@@ -32,7 +32,7 @@ class SimpleForm extends Component {
             submitting
             } = this.props;
         return (
-            <div>
+            <div className="ui container">
                 <div className="ui middle aligned center aligned grid">
                     <div className="column">
                         <h2 className="ui teal image header">

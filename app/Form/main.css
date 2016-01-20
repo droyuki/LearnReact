@@ -1,35 +1,16 @@
-.formcontainer {
-
-    position: relative;
-    top: 50%;
-    width: 350px;
-    display: table;
-    margin: 80px auto 0 auto;
-    background: #fff;
-    border-radius: 4px;
-    padding: 2%;
-
-}
-.formbtn{
-    margin-bottom: 5px;
-    text-align: center;
-}
-.formh2{
-    color: #3eacda;
-}
 body {
-    background-color: #DADADA;
-    height: 100%;
+    background-color: #FFFFFF;
 }
-
-Input {
-    width: 450px;
+.ui.menu .item img.logo {
+    margin-right: 1.5em;
 }
-
-.column {
-    max-width: 450px;
+.main.container {
+    margin-top: 7em;
 }
-h1,h2,h3 {
-    text-align: center;
-    vertical-align:middle;
+.wireframe {
+    margin-top: 2em;
+}
+.ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
 }

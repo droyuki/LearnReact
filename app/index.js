@@ -4,18 +4,21 @@ import { Router, Route, Link } from 'react-router'
 import HeaderView from './View/HeaderView'
 import Form from './Form/index'
 import About from './View/About'
+import Home from './View/Home'
+import Footer from './View/Footer'
 const App = React.createClass({
     render() {
         return (
             <div>
-                <HeaderView/>
-                <div className="container">
+                <Home/>
+                <div className="ui main text container">
                     <div className='row'>
                         <div className='col-xs-12'>
                             {this.props.children}
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         )
     }
