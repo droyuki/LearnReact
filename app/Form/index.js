@@ -7,6 +7,8 @@ import {Provider} from 'react-redux'
 import SimpleForm from './SimpleForm'
 import {createStore, combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
+import '../../node_modules/sweetalert/dist/sweetalert.css';
+import swal from '../../node_modules/sweetalert/dist/sweetalert.min';
 const reducers = {
     // ... your other reducers here ...
     form: formReducer     // <---- Mounted at 'form'. See note below.
@@ -14,11 +16,12 @@ const reducers = {
 const reducer = combineReducers(reducers);
 const store = createStore(reducer);
 
+import './main.css'
 export default class Form extends React.Component {
-    handleSubmit(data){
+    handleSubmit(data) {
         //TODO: sent JSON to kafka
-        console.log("submit"+ JSON.stringify(data, undefined, 2))
-        alert(JSON.stringify(data, undefined, 2))
+        console.log("submit" + JSON.stringify(data, undefined, 2))
+        swal( "Success!", JSON.stringify(data, undefined, 2),"success")
     }
 
     render() {
@@ -30,4 +33,4 @@ export default class Form extends React.Component {
     }
 }
 
-ReactDOM.render(<Form/>,document.getElementById("app"))
+ReactDOM.render(<Form/>, document.getElementById("app"))

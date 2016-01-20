@@ -1,0 +1,35 @@
+.container {
+
+    position: relative;
+    top: 50%;
+    width: 350px;
+    display: table;
+    margin: 80px auto 0 auto;
+    background: #fff;
+    border-radius: 4px;
+    padding: 2%;
+
+}
+.btn{
+    margin-bottom: 5px;
+    text-align: center;
+}
+.cs{
+    color: #3eacda;
+}
+body {
+    background-color: #DADADA;
+    height: 100%;
+}
+
+Input {
+    width: 450px;
+}
+
+.column {
+    max-width: 450px;
+}
+h1,h2,h3 {
+    text-align: center;
+    vertical-align:middle;
+}
