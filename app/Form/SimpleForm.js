@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {reduxForm} from 'redux-form';
-export const fields = ['firstName', 'lastName', 'email', 'sex', 'favoriteColor', 'employed', 'notes'];
+export const fields = ['appName', 'dataType', 'framework','notes'];
 
 class SimpleForm extends Component {
     static propTypes = {
@@ -10,67 +10,52 @@ class SimpleForm extends Component {
         submitting: PropTypes.bool.isRequired
     };
 
+
     render() {
         const {
-            fields: {firstName, lastName, email, sex, favoriteColor, employed, notes},
+            fields: {appName, dataType, framework, notes},
             handleSubmit,
             resetForm,
             submitting
             } = this.props;
-        return (<form onSubmit={handleSubmit}>
+        return (
+            <form onSubmit={handleSubmit}>
                 <div>
-                    <label>First Name</label>
+                    <label>App Name</label>
                     <div>
-                        <input type="text" placeholder="First Name" {...firstName}/>
+                        <input type="text" placeholder="App Name" {...appName}/>
                     </div>
                 </div>
                 <div>
-                    <label>Last Name</label>
-                    <div>
-                        <input type="text" placeholder="Last Name" {...lastName}/>
-                    </div>
-                </div>
-                <div>
-                    <label>Email</label>
-                    <div>
-                        <input type="email" placeholder="Email" {...email}/>
-                    </div>
-                </div>
-                <div>
-                    <label>Sex</label>
+                    <label>Data Type</label>
                     <div>
                         <label>
-                            <input type="radio" {...sex} value="male" checked={sex.value === 'male'}/> Male
+                            <input type="radio" {...dataType} value="stream" checked={dataType.value === 'stream'}/> Stream
                         </label>
                         <label>
-                            <input type="radio" {...sex} value="female" checked={sex.value === 'female'}/> Female
+                            <input type="radio" {...dataType} value="nonStream" checked={dataType.value === 'nonStream'}/> Non-Stream
                         </label>
                     </div>
                 </div>
                 <div>
-                    <label>Favorite Color</label>
+                    <label>Service Framework</label>
                     <div>
-                        <select {...favoriteColor}>
+                        <select {...framework} defaultValue="none">
                             <option></option>
-                            <option value="ff0000">Red</option>
-                            <option value="00ff00">Green</option>
-                            <option value="0000ff">Blue</option>
+                            <option value="spark">Spark</option>
+                            <option value="storm">Storm</option>
+                            <option value="none">None</option>
                         </select>
                     </div>
                 </div>
                 <div>
-                    <label>
-                        <input type="checkbox" {...employed}/> Employed
-                    </label>
-                </div>
-                <div>
                     <label>Notes</label>
                     <div>
-            <textarea
-                {...notes}
-                value={notes.value || ''} // required for reset form to work (only on textarea's)
-                // see: https://github.com/facebook/react/issues/2533
-            />
+                        <textarea
+                            {...notes}
+                            value={notes.value || ''} // required for reset form to work (only on textarea's)
+                            // see: https://github.com/facebook/react/issues/2533
+                        />
                     </div>
                 </div>
                 <div>

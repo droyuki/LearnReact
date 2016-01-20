@@ -23,7 +23,6 @@ var Main = React.createClass({
                 <HeaderView />
                 <input type="button" onClick={this._toggle} value="Press Me!"/>
                 {this.state.switch ? <TestOne /> : <TestTwo />}
-                <TodoApp />
             </div>
         );
     }
