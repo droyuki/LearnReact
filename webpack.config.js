@@ -8,7 +8,7 @@ var config = {
     entry: [
         'webpack-dev-server/client?http://localhost:8080',
         'webpack/hot/only-dev-server',
-        path.resolve(__dirname, 'app/Form/index.js')
+        path.resolve(__dirname, 'app/index.js')
     ],
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -22,6 +22,12 @@ var config = {
         }, {
             test: /\.css$/, // Only .css files
             loader: 'style!css' // Run both loaders
+        },{
+            test: /\.(jpe?g|png|gif|svg|ttf|woff|eot|woff2)$/i,
+            loaders: [
+                'file?hash=sha512&digest=hex&name=[hash].[ext]',
+                'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            ]
         }]
     },
     plugins: [

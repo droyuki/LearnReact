@@ -6,6 +6,7 @@ import TestOne from './TestOne';
 import TestTwo from './TestTwo';
 import HeaderView from './view/HeaderView';
 import TodoApp from './ReduxPractice/index'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 var Main = React.createClass({
     getInitialState: function () {
         return {

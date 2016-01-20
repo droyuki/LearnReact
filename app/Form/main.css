@@ -1,4 +1,4 @@
-.container {
+.formcontainer {
 
     position: relative;
     top: 50%;
@@ -10,11 +10,11 @@
     padding: 2%;
 
 }
-.btn{
+.formbtn{
     margin-bottom: 5px;
     text-align: center;
 }
-.cs{
+.formh2{
     color: #3eacda;
 }
 body {

@@ -1,38 +1,57 @@
-/**
- * Created by WeiChen on 2016/1/20.
- */
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { Router, Route, Link } from 'react-router'
-import { IndexRoute } from 'react-router'
-
-import Home from './View/home'
+import HeaderView from './View/HeaderView'
 import Form from './Form/index'
-const Dashboard = React.createClass({
+import About from './View/About'
+const App = React.createClass({
     render() {
-        return <div>Welcome to the app!</div>
+        return (
+            <div>
+                <HeaderView/>
+                <div className="container">
+                    <div className='row'>
+                        <div className='col-xs-12'>
+                            {this.props.children}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
     }
 })
 
-//const routeConfig = [
-//    { path: '/',
-//        component: Home,
-//        indexRoute: { component: Dashboard },
-//        childRoutes: [
-//            { path: 'about', component: About },
-//            { path: 'create_service', component:Form}
-//        ]
+//const About = React.createClass({
+//    render() {
+//        return <h3>About</h3>
 //    }
-//]
-const About = React.createClass({
+//})
+
+const Inbox = React.createClass({
     render() {
-        return <h1>About</h1>
+        return (
+            <div>
+                <h2>Inbox</h2>
+                {this.props.children || "Welcome to your Inbox"}
+            </div>
+        )
     }
 })
-ReactDOM.render((
+
+const Message = React.createClass({
+    render() {
+        return <h3>Message {this.props.params.id}</h3>
+    }
+})
+
+render((
     <Router>
-        <Route path="/" component={Home}>
-            <Route path="about" component={About} />
+        <Route path="/" component={App}>
+            <Route path="about" component={About}/>
+            <Route path="form" component={Form}/>
+            <Route path="inbox" component={Inbox}>
+                <Route path="messages/:id" component={Message}/>
+            </Route>
         </Route>
     </Router>
 ), document.getElementById("app"))
