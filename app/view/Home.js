@@ -42,7 +42,7 @@ export default class Home extends React.Component {
 
                     <div className="right menu">
                         <div className="item">
-                            <a cclassNamelass="ui button">Log in</a>
+                            <a className="ui button">Log in</a>
                         </div>
                         <div className="item">
                             <a className="ui primary button">Sign Up</a>

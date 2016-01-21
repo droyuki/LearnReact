@@ -4,13 +4,13 @@ import { Router, Route, Link } from 'react-router'
 import HeaderView from './View/HeaderView'
 import Form from './Form/index'
 import About from './View/About'
-import Home from './View/Home'
-import Footer from './View/Footer'
+import Home2 from './View/Home2'
+import Footer2 from './View/Footer2'
 const App = React.createClass({
     render() {
         return (
             <div>
-                <Home/>
+                <Home2/>
                 <div className="ui main text container">
                     <div className='row'>
                         <div className='col-xs-12'>
@@ -18,7 +18,7 @@ const App = React.createClass({
                         </div>
                     </div>
                 </div>
-                <Footer/>
+                <Footer2/>
             </div>
         )
     }

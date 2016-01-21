@@ -1,0 +1,31 @@
+.Image {
+    position: absolute;
+    /*margin: 0px auto;*/
+    /*top: 100px;*/
+    /*height: 400px;*/
+    left: 20%;
+    /*width: 400px;*/
+}
+
+.example-enter {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+}
+
+.example-leave {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0;
+}
+
+.link-active {
+    color: #bbbbbb;
+    text-decoration: none;
+}

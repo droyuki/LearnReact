@@ -96,7 +96,6 @@ class SimpleForm extends Component {
                                 </div>
                             </div>
                         </form>
-
                         <div className="ui message">
                             Need some help ? <a href="#">Help</a>
                         </div>
