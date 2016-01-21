@@ -35,7 +35,7 @@ class SimpleForm extends Component {
             <div className="ui container">
                 <div className="ui middle aligned center aligned grid">
                     <div className="column">
-                        <h2 className="ui teal image header">
+                        <h2 className="ui blue image header">
                             <div className="content">
                                 Create Service
                             </div>
@@ -83,9 +83,9 @@ class SimpleForm extends Component {
                                     </div>
                                 </div>
 
-                                <div className="ui buttons  middle aligned">
+                                <div className="ui buttons middle aligned">
                                     <button disabled={submitting} onClick={handleSubmit} bsStyle="info"
-                                            className="ui large teal submit button">
+                                            className="ui large blue submit button">
                                         {submitting ? <i/> : <i/>}Submit
                                     </button>
                                     <div className="or"></div>

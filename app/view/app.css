@@ -1,12 +1,16 @@
 .Image {
     position: absolute;
     /*margin: 0px auto;*/
-    /*top: 100px;*/
+    top: 60px;
     /*height: 400px;*/
-    left: 20%;
+    /*left: 20%;*/
     /*width: 400px;*/
 }
 
+.header_css{
+    top:200px;
+    background-color: #ffffff;
+}
 .example-enter {
     opacity: 0.01;
     transition: opacity .5s ease-in;
